@@ -1,1 +1,1 @@
-print("Hello world from test-branches!")
+print("Hello world from conflicts in merge!")
