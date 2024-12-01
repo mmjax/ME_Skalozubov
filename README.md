@@ -21,18 +21,23 @@ hello.sh
 Результат выполнения созданных скриптов 3 практики c 6 по 10
 
 sum.sh
+
 ![img.png](img_data/lb7/sum.png)
 
 read_file.sh
+
 ![img.png](img_data/lb7/read_file.png)
 
 replace_text.sh
+
 ![img.png](img_data/lb7/replace_text.png)
 
 backup.sh
+
 ![img.png](img_data/lb7/backup.png)
 
 math_operations.sh
+
 ![img.png](img_data/lb7/math_operations.png)
 
 
