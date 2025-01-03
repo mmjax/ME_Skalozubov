@@ -236,3 +236,43 @@ https://github.com/vladoky/urfu_seminar/blob/main/Практика/04.practice_s
 ![img.png](img_data/lb9/from_server_to_pc.png)
 
 
+## Лабороторная работа 10
+#### Задача 1: Настройка SSH-аутентификации по ключу
+
+![img.png](img_data/lb10/img.png)
+
+#### Задача 2: Создание архивов на удаленной машине
+
+![img_2.png](img_data/lb10/img_2.png)
+
+#### Задание 3: Перенос файлов и архивов между локальным хостом и удаленной машиной
+
+![img_3.png](img_data/lb10/img_3.png)
+
+
+## Лабороторная работа 11
+#### Часть 1 и 2: Подъем PostgreSQL 12 и Запуск Grafana
+Был создан compose файл для запуска двух контейнеров
+
+![img.png](img_data/lb11/img.png)
+
+запуск контейнеров
+![img_1.png](img_data/lb11/img_1.png)
+
+#### Часть 3 и 4: Создание таблицы в PostgreSQL и заполнение данными
+
+![img_2.png](img_data/lb11/img_2.png)
+
+#### Часть 5: Подключение Grafana к PostgreSQL и построение дашборда
+
+Добавление конфигурации postgresql
+
+![img_4.png](img_data/lb11/img_4.png)
+
+Создание дашборда
+
+![img_5.png](img_data/lb11/img_5.png)
+
+Построение графика
+
+![img_7.png](img_data/lb11/img_7.png)
