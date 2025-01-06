@@ -276,3 +276,30 @@ https://github.com/vladoky/urfu_seminar/blob/main/Практика/04.practice_s
 Построение графика
 
 ![img_7.png](img_data/lb11/img_7.png)
+
+
+## Лабороторная работа 12
+### Тестирование pytest
+#### Задание 1
+
+![img.png](img_data/lb12/img.png)
+
+#### Задание 2
+
+![img_1.png](img_data/lb12/img_1.png)
+
+#### Задание 3
+
+![img_2.png](img_data/lb12/img_2.png)
+
+#### Задание 4
+
+![img_3.png](img_data/lb12/img_3.png)
+
+#### Задание 5
+
+![img_4.png](img_data/lb12/img_4.png)
+
+#### Задание 6
+
+![img_5.png](img_data/lb12/img_5.png)
