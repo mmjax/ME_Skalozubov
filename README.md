@@ -82,13 +82,30 @@ Fry: ['это', 'мой', 'джуффин', 'сэр', 'ты', 'просто', '�
 Strugatskie: ['андрей', 'сказать', 'виктор', 'румат', 'это', 'изя', 'дон', 'человек', 'господин', 'знать']
 ```
 TF-IDF эффективно подчеркивает слова, характерные именно для определенного автора, игнорируя слишком частые, но малозначимые
-
 Все эти особенности формируют уникальные стили авторов
 
 
-## Модель и её обучение
+## Векторизация текста, модель и её обучение
 
-### Архитектура
+### Векторизация текстов с TF-IDF
+Для преобразования текстов в числовые признаки применяется метод TF-IDF
+```python
+vectorizer = TfidfVectorizer(max_features=5000, ngram_range=(1, 2))
+X = vectorizer.fit_transform(texts).toarray()
+X_test = vectorizer.transform(test_texts).toarray()
+y = np.array(labels)
+```
+### Подготовка данных для обучения
+```python
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+
+class_weights = dict(enumerate(
+    compute_class_weight(class_weight='balanced', classes=np.unique(y_train), y=y_train)
+))
+```
+Из-за неравномерного распределения текстов по авторам (что видно на первом графике) используется class_weight='balanced'
+
+### Архитектура 
 ```python
 def create_tfidf_dense_model(input_dim, num_classes=6, dropout_rate=0.3):
     model = Sequential([
@@ -108,6 +125,8 @@ def create_tfidf_dense_model(input_dim, num_classes=6, dropout_rate=0.3):
 ```
 В финальной версии модели для регуляризации используется Dropout=0.3 после первых двух слоев.
 Функция потерь - кросс-энтропия. Оптимизация Adam с шагом 1e-4
+
+Модель обучалась на 10 эпохах с оптимальным размером батча - 32, так же была применена балансировка классов
 
 Во время обучения были сняты метрики
 
